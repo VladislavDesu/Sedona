@@ -70,9 +70,17 @@
     padding-bottom: 40px;
 }
 
+.reasons__row:nth-of-type(1) .picture {
+    background-color: #574d4e;
+}
+
 .reasons__row:nth-of-type(3) .reason {
     padding-top: 40px;
     padding-bottom: 38px;
+}
+
+.reasons__row:nth-of-type(3) .picture {
+    background-color: #957260;
 }
 
 .reasons__row:nth-of-type(4) {
