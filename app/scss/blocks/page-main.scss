@@ -1,0 +1,46 @@
+.page-main {
+
+    &::before {
+        content: "";
+        display: block;
+        height: 389px;
+        background-color: $blue;
+        background-image:
+            url("../img/intro-text.png"),
+            url("../img/intro-triangle.png"),
+            url("../img/intro-bg-mobile.jpg");
+        background-position: center, bottom, center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media #{$tablet-width} {
+
+    .page-main {
+
+        &::before {
+            height: 518px;
+            background-image:
+                url("../img/intro-text.png"),
+                url("../img/intro-triangle.png"),
+                url("../img/intro-bg-tablet.jpg");
+            background-position: center, bottom, center;
+            background-size: 460px, auto, cover;
+        }
+    }
+}
+
+@media #{$desktop-width} {
+
+    .page-main {
+
+        &::before {
+            background-image:
+                url("../img/intro-text.png"),
+                url("../img/intro-triangle.png"),
+                url("../img/intro-bg-desktop.jpg");
+            background-position: center, bottom, center;
+            background-size: 460px, auto, cover;
+        }
+    }
+}

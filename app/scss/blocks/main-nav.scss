@@ -1,0 +1,135 @@
+.main-nav {
+    position: relative;
+    padding-bottom: 56px;
+}
+
+.main-nav--closed .main-nav__list {
+    display: none;
+}
+
+.main-nav--closed .main-nav__btn {
+    &::after {
+        display: none;
+    }
+
+    &::before {
+        top: 0;
+        right: 0;
+        left: auto;
+        background-color: $blue;
+        box-shadow: 0 8px 0 0 $blue, 0 16px 0 0 $blue;
+        transform: rotate(0deg);
+    }
+}
+
+.main-nav__btn {
+    position: absolute;
+    z-index: 10;
+    top: 17px;
+    right: 20px;
+    width: 23px;
+    height: 23px;
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -2px;
+        width: 28px;
+        height: 4px;
+        background-color: #ffffff;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.main-nav__list {
+    position: relative;
+    @include no-list-style();
+    background-color: $blue;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+    }
+}
+
+.main-nav__item {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:first-child {
+        border-top-color: transparent;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.main-nav__link {
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media #{$tablet-width} {
+
+    .main-nav {
+        padding-bottom: 0;
+    }
+
+    .main-nav__btn {
+        display: none;
+    }
+
+    .main-nav__list {
+        display: flex;
+        background-color: #ffffff;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .main-nav__item {
+        width: 153px;
+        border: none;
+
+        &:nth-child(2) {
+            margin-right: auto;
+        }
+    }
+
+    .main-nav__link {
+        padding-top: 14px;
+        padding-bottom: 16px;
+        font-size: 14px;
+        line-height: 26px;
+        color: #000000;
+    }
+}
+
+@media #{$desktop-width} {
+
+    .main-nav__item {
+        width: 239px;
+    }
+}

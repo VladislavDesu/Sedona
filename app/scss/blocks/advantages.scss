@@ -1,0 +1,106 @@
+.advantages__list {
+    @include no-list-style();
+    padding-top: 35px;
+    padding-bottom: 37px;
+}
+
+.advantages__item {
+    position: relative;
+    padding-bottom: 28px;
+    padding-left: 50px;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -9px;
+        left: 0;
+        width: 42px;
+        height: 38px;
+    }
+
+    &--house::before {
+        background-image: url("../img/icon-house.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--gift::before {
+        background-image: url("../img/icon-gift.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--food::before {
+        background-image: url("../img/icon-burger.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.advantages__title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.advantages__desc {
+    margin: 0;
+}
+
+@media #{$tablet-width} {
+
+    .advantages {
+        text-align: center;
+    }
+
+    .advantages__list {
+        display: flex;
+        padding-top: 57px;
+        padding-bottom: 15px;
+        min-height: 258px;
+    }
+
+    .advantages__item {
+        width: 33.33%;
+        padding-top: 102px;
+        padding-right: 45px;
+        padding-bottom: 0;
+        padding-left: 45px;
+        box-sizing: border-box;
+
+        &::before {
+            top: 0;
+            left: 50%;
+            width: 77px;
+            height: 78px;
+            transform: translate(-50%);
+        }
+
+        &--house::before {
+            background-image: url("../img/icon-house-big.png");
+        }
+
+        &--gift::before {
+            background-image: url("../img/icon-gift-big.png");
+        }
+
+        &--food::before {
+            background-image: url("../img/icon-burger-big.png");
+        }
+    }
+
+    .advantages__item--gift {
+        order: 1;
+    }
+
+    .advantages__title {
+        margin-bottom: 21px;
+        font-size: 21px;
+    }
+}

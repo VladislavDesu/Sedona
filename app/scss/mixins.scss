@@ -1,0 +1,20 @@
+@mixin container() {
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin no-list-style() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin no-btn-style() {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+}
