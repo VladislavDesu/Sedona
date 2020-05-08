@@ -33,6 +33,19 @@
     text-transform: uppercase;
 }
 
+.search__btn:hover {
+    background-color: #669ec0;
+}
+
+.search__btn:active {
+    background-color: #5496bd;
+}
+
+.search__btn:disabled {
+    background-color: #e5e5e5;
+    opacity: 0.3;
+}
+
 @media #{$tablet-width} {
 
     .search {

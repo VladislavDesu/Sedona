@@ -69,6 +69,14 @@
     margin-left: 9px;
 }
 
+.social__btn:hover {
+    background-color: #669ec0;
+}
+
+.social__btn:active {
+    background-color: #5496bd;
+}
+
 @media #{$tablet-width} {
 
     .page-footer {

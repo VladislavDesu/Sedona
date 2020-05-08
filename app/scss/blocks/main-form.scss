@@ -41,6 +41,13 @@
     box-sizing: border-box;
 }
 
+.main-form input[type="text"]:hover,
+.main-form input[type="tel"]:hover,
+.main-form input[type="mail"]:hover {
+    background-color: #e5e5e5;
+}
+
+
 .personal__item {
     display: flex;
     align-items: center;
@@ -168,6 +175,14 @@
     display: none;
 }
 
+.form__impression label:hover::before{
+    background-color: #e5e5e5;
+}
+
+.form__impression label:active::before{
+    background-color: #d5d5d5;
+}
+
 #imp-1:checked + label::after,
 #imp-2:checked + label::after,
 #imp-3:checked + label::after {
@@ -225,6 +240,14 @@
     display: none;
 }
 
+.form__sight label:hover::before{
+    background-color: #e5e5e5;
+}
+
+.form__sight label:active::before{
+    background-color: #d5d5d5;
+}
+
 #sight-1:checked + label::after,
 #sight-2:checked + label::after,
 #sight-3:checked + label::after,
@@ -254,6 +277,10 @@
     resize: none;
 }
 
+.emotions__describe textarea:hover {
+    background-color: #e5e5e5;
+}
+
 .main-form .form__btn {
     font-size: 21px;
     line-height: 26px;
@@ -263,6 +290,18 @@
     text-transform: uppercase;
 }
 
+.main-form .form__btn:hover {
+    background-color: #669ec0;
+}
+
+.main-form .form__btn:active {
+    background-color: #5496bd;
+}
+
+.main-form .form__btn:disabled {
+    background-color: #e5e5e5;
+    opacity: 0.3;
+}
 .need-to-fill {
     display: none;
 }
