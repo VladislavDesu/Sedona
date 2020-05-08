@@ -99,7 +99,7 @@ gulp.task("serve", function() {
 
     gulp.watch("app/scss/**/*.scss", gulp.series("style"));
     gulp.watch("app/*.html").on("change", gulp.series("html"));
-    gulp.watch("build/js/**/*.js").on("change", server.reload);
+    gulp.watch("app/js/**/*.js").on("change", gulp.series("js"));
 });
 
 gulp.task("html", function() {
@@ -107,7 +107,15 @@ gulp.task("html", function() {
         .pipe(gulp.dest("build"))
         .pipe(server.reload({
             stream: true
-        }));
+    }));
+});
+
+gulp.task("js", function() {
+    return gulp.src("app/js/**/*.js")
+        .pipe(gulp.dest("build/js"))
+        .pipe(server.reload({
+            stream: true
+    }));
 });
 
 gulp.task("build", gulp.series(

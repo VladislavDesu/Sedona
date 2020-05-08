@@ -1,8 +1,25 @@
 .map {
     background-color: #dae6c4;
+    background-image: url("../img/map-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.map img {
+.map iframe {
     display: block;
-    margin: auto;
+    width: 100%;
+}
+
+@media #{$tablet-width} {
+
+    .map {
+        background-image: url("../img/map-tablet@1x.jpg");
+    }
+}
+
+@media #{$desktop-width} {
+
+    .map {
+        background-image: url("../img/map-desktop@1x.jpg");
+    }
 }

@@ -1,0 +1,544 @@
+.main-form fieldset {
+    margin: 0;
+    padding-top: 18px;
+    padding-right: 0;
+    padding-bottom: 25px;
+    padding-left: 0;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.main-form legend {
+    margin: 0;
+    margin-bottom: 21px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    text-align: center;
+}
+
+.main-form label {
+    line-height: 26px;
+}
+
+
+.main-form input {
+    @include no-input-style();
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 22px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+}
+
+.personal__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form__personal label {
+    margin-right: 19px;
+}
+
+.main-form .form__contacts {
+    padding-bottom: 28px;
+}
+
+.form__contacts legend {
+    margin-bottom: 20px;
+}
+
+.form__contacts  label {
+    display: block;
+    margin-left: 21px;
+    margin-bottom: 7px;
+}
+
+.form__contacts input {
+    padding-right: 58px;
+}
+
+.contacts__phone {
+    position: relative;
+    margin-bottom: 42px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 33px;
+        right: 0;
+        width: 58px;
+        height: 58px;
+        background-color: #e5e5e5;
+        background-image: url("../img/icon-phone.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.contacts__phone-error {
+    position: absolute;
+    display: block;
+    margin-top: 8px;
+    margin-left: 21px;
+    color: #ff5c5c;
+    text-transform: none;
+}
+
+.contacts__email {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 33px;
+        right: 0;
+        width: 58px;
+        height: 58px;
+        background-color: #e5e5e5;
+        background-image: url("../img/icon-mail.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.main-form .form__impression {
+    padding-bottom: 29px;
+}
+
+.form__impression div {
+    margin-bottom: 13px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form__impression label {
+    position: relative;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 80px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 56px;
+        height: 56px;
+        background-color: #f2f2f2;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 17px;
+        width: 22px;
+        height: 22px;
+        background-color: #333333;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.form__impression input[type="radio"] {
+    display: none;
+}
+
+#imp-1:checked + label::after,
+#imp-2:checked + label::after,
+#imp-3:checked + label::after {
+    display: block;
+}
+
+.form__sight legend {
+    margin-bottom: 15px;
+}
+
+.form__sight div {
+    margin-bottom: 24px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form__sight label {
+    position: relative;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 80px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 56px;
+        height: 56px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 17px;
+        width: 18px;
+        height: 9px;
+        border-left: 4px solid #333333;
+        border-bottom: 4px solid #333333;
+        transform: translateY(-70%) rotate(-45deg);
+    }
+}
+
+.form__sight input[type="checkbox"] {
+    display: none;
+}
+
+#sight-1:checked + label::after,
+#sight-2:checked + label::after,
+#sight-3:checked + label::after,
+#sight-4:checked + label::after {
+    display: block;
+}
+
+.main-form .form__emotions {
+    padding-top: 19px;
+    padding-bottom: 36px;
+}
+
+.emotions__describe textarea {
+    width: 100%;
+    height: 160px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 12px;
+    margin-bottom: 43px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    border: none;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.main-form .form__btn {
+    font-size: 21px;
+    line-height: 26px;
+    padding-left: 0;
+    color: #ffffff;
+    background-color: $blue;
+    text-transform: uppercase;
+}
+
+.need-to-fill {
+    display: none;
+}
+
+@media #{$tablet-width} {
+
+    .main-form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-form fieldset {
+        border-bottom: none;
+    }
+
+    .main-form legend {
+        font-size: 21px;
+        margin-bottom: 57px;
+    }
+
+    .main-form .form__personal {
+        width: 50%;
+        padding: 0;
+    }
+
+    .personal__item {
+        margin-left: 58px;
+    }
+
+    .main-form .form__contacts {
+        width: 100%;
+        padding-top: 70px;
+        padding-bottom: 35px;
+    }
+
+    .form__contacts legend {
+        position: relative;
+        margin-bottom: 24px;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 123px;
+            height: 1px;
+            background-color: #dbdbdb;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+
+    .contacts__phone {
+        margin-bottom: 23px;
+    }
+
+    .contacts__phone-error {
+        top: -5px;
+        right: 0;
+    }
+
+    .main-form .form__impression {
+        order: -1;
+        width: 50%;
+        padding: 0;
+        border-right: 1px solid #dbdbdb;
+        box-sizing: border-box;
+    }
+
+    .form__impression div {
+        margin-bottom: 23px;
+    }
+
+    .main-form .form__sight {
+        width: 100%;
+        padding-bottom: 18px;
+    }
+
+    .form__sight legend {
+        position: relative;
+        padding-right: 20%;
+        padding-left: 20%;
+        margin-bottom: 41px;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 123px;
+            height: 1px;
+            background-color: #dbdbdb;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+
+    .form__sight-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form__sight-flex .form__sight-flex-item {
+        width: 35%;
+        margin-bottom: 32px;
+
+        &:last-child {
+            margin-bottom: 32px;
+        }
+
+        &:nth-of-type(4) {
+            order: 1;
+        }
+
+        &:nth-of-type(2) {
+            order: 1;
+        }
+    }
+
+    .main-form .form__emotions {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .form__emotions legend {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 123px;
+            height: 1px;
+            background-color: #dbdbdb;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+
+    .emotions__describe {
+        position: relative;
+    }
+
+    .emotions__describe textarea {
+        margin-bottom: 52px;
+    }
+
+    .form__btn {
+        max-width: 324px;
+    }
+
+    .need-to-fill {
+        position: absolute;
+        display: inline;
+        bottom: -42px;
+        right: 0;
+    }
+}
+
+@media #{$desktop-width} {
+
+    .personal__item {
+        margin-left: 80px;
+    }
+
+    .main-form .form__contacts {
+        position: relative;
+        padding-top: 68px;
+        padding-bottom: 33px;
+    }
+
+    .form__contacts legend {
+        margin-bottom: 75px;
+
+        &::before,
+        &::after {
+            width: 280px;
+        }
+    }
+
+    .contacts__email,
+    .contacts__phone {
+
+        &::before {
+            top: 0;
+        }
+    }
+
+    .form__contacts label {
+        margin: 0;
+        margin-right: 15px;
+    }
+
+    .contacts__phone-error {
+        top: -38px;
+        left: 35%;
+        right: 0;
+    }
+
+    .form__contacts-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form__contacts-flex-item:nth-child(2) {
+        align-self: flex-start;
+    }
+
+    .form__contacts-flex-item {
+        display: flex;
+        margin-bottom: 0;
+
+        & input {
+            width: 316px;
+        }
+    }
+
+    .main-form .form__sight {
+        padding-bottom: 49px;
+    }
+
+    .form__sight legend {
+        padding-right: 30%;
+        padding-left: 30%;
+        margin-bottom: 41px;
+
+        &::before,
+        &::after {
+            width: 280px;
+        }
+    }
+
+    .form__sight-flex {
+        justify-content: space-between;
+    }
+
+    .form__sight-flex .form__sight-flex-item {
+        width: 21%;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .main-form .form__emotions {
+        padding-bottom: 66px;
+        margin-bottom: 0;
+    }
+
+    .main-form .form__btn {
+        max-width: 480px;
+    }
+}

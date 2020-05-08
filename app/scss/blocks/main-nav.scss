@@ -8,6 +8,8 @@
 }
 
 .main-nav--closed .main-nav__btn {
+    width: 28px;
+
     &::after {
         display: none;
     }
@@ -48,6 +50,14 @@
     &::after {
         transform: rotate(-45deg);
     }
+}
+
+.no-js .main-nav__btn {
+    display: none;
+}
+
+.no-js .main-nav__list {
+    display: block;
 }
 
 .main-nav__list {
@@ -107,6 +117,10 @@
         &::before {
             display: none;
         }
+    }
+
+    .main-nav--closed .main-nav__list {
+        display: flex;
     }
 
     .main-nav__item {
