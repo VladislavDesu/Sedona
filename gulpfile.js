@@ -33,10 +33,10 @@ gulp.task("style", function() {
                 sort: true
             })
         ]))
-        .pipe(gulp.dest("build/css"))
+        .pipe(gulp.dest("docs/css"))
         .pipe(minify())
         .pipe(rename("style.min.css"))
-        .pipe(gulp.dest("build/css"))
+        .pipe(gulp.dest("docs/css"))
         .pipe(server.reload({
             stream: true
         }));
@@ -49,11 +49,11 @@ gulp.task("normalize", function() {
         }).on("error", sass.logError))
         .pipe(minify())
         .pipe(rename("normalize.min.css"))
-        .pipe(gulp.dest("build/css"));
+        .pipe(gulp.dest("docs/css"));
 });
 
 gulp.task("images", function() {
-    return gulp.src("build/img/**/*.{png,jpg,gif}")
+    return gulp.src("docs/img/**/*.{png,jpg,gif}")
         .pipe(imagemin([
             imagemin.optipng({
                 optimizationLevel: 3
@@ -62,17 +62,17 @@ gulp.task("images", function() {
                 progressive: true
             })
         ]))
-        .pipe(gulp.dest("build/img"));
+        .pipe(gulp.dest("docs/img"));
 });
 
 gulp.task("symbols", function() {
-    return gulp.src("build/img/icons/*.svg")
+    return gulp.src("docs/img/icons/*.svg")
         .pipe(svgmin())
         .pipe(svgstore({
             inlineSvg: true
         }))
         .pipe(rename("symbols.svg"))
-        .pipe(gulp.dest("build/img"));
+        .pipe(gulp.dest("docs/img"));
 });
 
 gulp.task("copy", function() {
@@ -84,17 +84,17 @@ gulp.task("copy", function() {
         ], {
             base: "app"
         })
-        .pipe(gulp.dest("build"));
+        .pipe(gulp.dest("docs"));
 });
 
 gulp.task("clean", function() {
-    return gulp.src("build", {allowEmpty: true})
+    return gulp.src("docs", {allowEmpty: true})
         .pipe(clean());
 });
 
 gulp.task("serve", function() {
     server.init({
-        server: "build"
+        server: "docs"
     });
 
     gulp.watch("app/scss/**/*.scss", gulp.series("style"));
@@ -104,7 +104,7 @@ gulp.task("serve", function() {
 
 gulp.task("html", function() {
     return gulp.src("app/**/*.html")
-        .pipe(gulp.dest("build"))
+        .pipe(gulp.dest("docs"))
         .pipe(server.reload({
             stream: true
     }));
@@ -112,7 +112,7 @@ gulp.task("html", function() {
 
 gulp.task("js", function() {
     return gulp.src("app/js/**/*.js")
-        .pipe(gulp.dest("build/js"))
+        .pipe(gulp.dest("docs/js"))
         .pipe(server.reload({
             stream: true
     }));
