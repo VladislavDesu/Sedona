@@ -1,0 +1,27 @@
+@mixin container() {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin no-list-style() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin no-btn-style() {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+@mixin no-input-style() {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+}

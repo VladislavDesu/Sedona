@@ -2,13 +2,12 @@
   "name": "sedona",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "start": "gulp build & gulp server",
+    "build": "gulp build"
   },
-  "author": "",
+  "author": "Vlad Gryadko (vgryadko@gmail.com)",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.7.6",
@@ -24,6 +23,13 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-svgmin": "^2.2.0",
-    "gulp-svgstore": "^7.0.1"
-  }
+    "gulp-svgstore": "^7.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.2.1"
+  },
+  "dependencies": {}
 }
